@@ -20,7 +20,8 @@
 						"storeSettings": {
 							"type": "AzureBlobFSReadSettings",
 							"recursive": true,
-							"wildcardFileName": "*",
+							"wildcardFolderPath": "copybeavor",
+							"wildcardFileName": "sample_data_2.csv",
 							"enablePartitionDiscovery": false
 						},
 						"formatSettings": {
@@ -28,32 +29,10 @@
 						}
 					},
 					"sink": {
-						"type": "DelimitedTextSink",
-						"storeSettings": {
-							"type": "AzureBlobFSWriteSettings",
-							"copyBehavior": "MergeFiles",
-							"metadata": [
-								{
-									"name": "name",
-									"value": {
-										"value": "@pipeline().DataFactory",
-										"type": "Expression"
-									}
-								},
-								{
-									"name": "id",
-									"value": {
-										"value": "@pipeline().TriggerId",
-										"type": "Expression"
-									}
-								}
-							]
-						},
-						"formatSettings": {
-							"type": "DelimitedTextWriteSettings",
-							"quoteAllText": true,
-							"fileExtension": ".txt"
-						}
+						"type": "AzureSqlSink",
+						"writeBehavior": "insert",
+						"sqlWriterUseTableLock": false,
+						"disableMetricsCollection": false
 					},
 					"enableStaging": false,
 					"translator": {
@@ -73,7 +52,7 @@
 				],
 				"outputs": [
 					{
-						"referenceName": "DelimitedText2",
+						"referenceName": "AzureSqlTable1",
 						"type": "DatasetReference"
 					}
 				]
