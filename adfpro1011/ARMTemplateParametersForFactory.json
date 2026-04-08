@@ -8,8 +8,20 @@
 		"raw_to_target_accountKey": {
 			"value": ""
 		},
+		"AzureSqlDatabase1_password": {
+			"value": ""
+		},
 		"raw_to_target_properties_typeProperties_url": {
 			"value": "https://storageacc1011.dfs.core.windows.net/"
+		},
+		"AzureSqlDatabase1_properties_typeProperties_server": {
+			"value": "servermydbrohit.database.windows.net"
+		},
+		"AzureSqlDatabase1_properties_typeProperties_database": {
+			"value": "mydb"
+		},
+		"AzureSqlDatabase1_properties_typeProperties_userName": {
+			"value": "Rohit"
 		}
 	}
 }
