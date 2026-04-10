@@ -7,17 +7,13 @@
 			"metadata": "Data Factory name",
 			"defaultValue": "adfpro1011"
 		},
-		"raw_to_target_accountKey": {
-			"type": "secureString",
-			"metadata": "Secure string for 'accountKey' of 'raw_to_target'"
-		},
 		"AzureSqlDatabase1_password": {
 			"type": "secureString",
 			"metadata": "Secure string for 'password' of 'AzureSqlDatabase1'"
 		},
-		"raw_to_target_properties_typeProperties_url": {
-			"type": "string",
-			"defaultValue": "https://storageacc1011.dfs.core.windows.net/"
+		"raw_to_target_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'raw_to_target'"
 		},
 		"AzureSqlDatabase1_properties_typeProperties_server": {
 			"type": "string",
@@ -30,6 +26,10 @@
 		"AzureSqlDatabase1_properties_typeProperties_userName": {
 			"type": "string",
 			"defaultValue": "Rohit"
+		},
+		"raw_to_target_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://storageacc1011.dfs.core.windows.net/"
 		},
 		"containerUri": {
 			"type": "string",
@@ -58,14 +58,11 @@
 					"factoryName": {
 						"value": "[parameters('factoryName')]"
 					},
-					"raw_to_target_accountKey": {
-						"value": "[parameters('raw_to_target_accountKey')]"
-					},
 					"AzureSqlDatabase1_password": {
 						"value": "[parameters('AzureSqlDatabase1_password')]"
 					},
-					"raw_to_target_properties_typeProperties_url": {
-						"value": "[parameters('raw_to_target_properties_typeProperties_url')]"
+					"raw_to_target_accountKey": {
+						"value": "[parameters('raw_to_target_accountKey')]"
 					},
 					"AzureSqlDatabase1_properties_typeProperties_server": {
 						"value": "[parameters('AzureSqlDatabase1_properties_typeProperties_server')]"
@@ -75,6 +72,9 @@
 					},
 					"AzureSqlDatabase1_properties_typeProperties_userName": {
 						"value": "[parameters('AzureSqlDatabase1_properties_typeProperties_userName')]"
+					},
+					"raw_to_target_properties_typeProperties_url": {
+						"value": "[parameters('raw_to_target_properties_typeProperties_url')]"
 					}
 				}
 			},
