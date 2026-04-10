@@ -10,8 +10,8 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"folderPath": "files",
-				"fileSystem": "metastore"
+				"folderPath": "missing",
+				"fileSystem": "sink"
 			},
 			"columnDelimiter": ",",
 			"escapeChar": "\\",
