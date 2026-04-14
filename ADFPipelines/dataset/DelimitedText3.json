@@ -15,11 +15,11 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"fileName": {
+				"folderPath": {
 					"value": "@dataset().filename",
 					"type": "Expression"
 				},
-				"fileSystem": "target"
+				"fileSystem": "data"
 			},
 			"columnDelimiter": ",",
 			"escapeChar": "\\",
